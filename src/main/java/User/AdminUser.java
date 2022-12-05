@@ -1,13 +1,9 @@
 package User;
 
-public class AdminUser extends AUser {
+public class AdminUser extends User {
 
     public AdminUser(String name, String email, String phoneNumber, String homeAddress, String password) {
-        super.setName(name);
-        super.setEmail(email);
-        super.setPhoneNumber(phoneNumber);
-        super.setHomeAddress(homeAddress);
-        super.setPassword(password);
+        super(name, email, phoneNumber, homeAddress, password);
     }
 
     public void isAdmin() {

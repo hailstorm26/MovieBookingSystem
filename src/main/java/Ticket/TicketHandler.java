@@ -2,7 +2,7 @@ package Ticket;
 
 import Movie.Movie;
 import Movie.MovieHandler;
-import User.AUser;
+import User.User;
 import User.BasicUser;
 import User.UserHandler;
 
@@ -10,13 +10,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TicketHandler {
-    public Map<AUser, Ticket> storage = new HashMap<>();
+    public Map<User, Ticket> storage = new HashMap<>();
 
     private static TicketHandler instance;
 
     public static TicketHandler getInstance() {
         if (instance == null) {
-            Class var0 = TicketHandler.class;
+            Class<TicketHandler> var0 = TicketHandler.class;
             synchronized (var0) {
                 if (instance == null) {
                     instance = new TicketHandler();
@@ -26,7 +26,7 @@ public class TicketHandler {
         return instance;
     }
 
-    public boolean removeTicket(AUser AUser, Ticket ticket) {
+    public boolean removeTicket(User AUser, Ticket ticket) {
         try {
             AUser.getTickets().remove(ticket);
             return true;
@@ -35,7 +35,7 @@ public class TicketHandler {
         }
     }
 
-    public Map<AUser, Ticket> getTickets() {
+    public Map<User, Ticket> getTickets() {
         return storage;
     }
 

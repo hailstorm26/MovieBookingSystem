@@ -15,7 +15,7 @@ public class MovieHandler {
 
     public static MovieHandler getInstance() {
         if (instance == null) {
-            Class var0 = MovieHandler.class;
+            Class<MovieHandler> var0 = MovieHandler.class;
             synchronized (var0) {
                 if (instance == null) {
                     instance = new MovieHandler();

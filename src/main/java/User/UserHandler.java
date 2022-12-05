@@ -16,7 +16,7 @@ public class UserHandler {
                     instance = new UserHandler();
                 }
             }
-        }
+        } 
         return instance;
     }
 

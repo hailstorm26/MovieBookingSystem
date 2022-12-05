@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class MovieBookingSystem {
+package PACKAGE_NAME;
+public class MovieBookingSystem {
+
 }

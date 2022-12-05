@@ -1,2 +1,4 @@
-package User;public class BasicUser {
+package User;
+public class BasicUser {
+
 }

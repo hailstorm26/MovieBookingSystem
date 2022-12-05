@@ -1,2 +1,4 @@
-package Movie;public class MovieHandler {
+package Movie;
+public class MovieHandler {
+
 }

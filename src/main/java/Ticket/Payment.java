@@ -1,3 +1,5 @@
+package Ticket;
+
 public class Payment {
     public static boolean validateCard(String cardNumber) {
         return isNumeric(cardNumber) && cardNumber.length() == 16;

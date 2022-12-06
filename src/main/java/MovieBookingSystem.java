@@ -26,7 +26,7 @@ public class MovieBookingSystem {
                 "surprise.Deadline notes,Fiennes plays the world-class chef who sets it all up and adds some unexpected" +
                 " ingredients to the menu planned. The action follows one particular A-list couple that takes part. " +
                 "I've heard Stone will play half of that couple.",7.50, "src/main/java/the menu.png");
-        createMovieAndShowings("8:00pm", "Lubbock", "Top Gun: Maverick", "After more " +
+        createMovieAndShowings("8:25pm", "Lubbock", "Top Gun: Maverick", "After more " +
                 "than 30 years of service as one of the Navy's top aviators, Pete \"Maverick\" Mitchell is where he " +
                 "belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that " +
                 "would ground him. Training a detachment of graduates for a special assignment, Maverick must confront " +

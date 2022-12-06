@@ -6,10 +6,6 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import Ticket.Ticket;
-import User.AUser;
 
 @Data @Builder
 public class Movie {
@@ -21,12 +17,12 @@ public class Movie {
     public List<Review> reviews;
 
     protected Movie(String title, String description, double price, int ticketsSold, HashMap<String, List<String>> showings, List<Review> reviews) {
-    	title = this.title;
-    	description = this.description;
-    	price = this.price;
-    	ticketsSold = this.ticketsSold;
-    	showings = this.showings;
-    	reviews = this.reviews;
+    	this.title = title;
+    	this.description = description;
+    	this.price = price;
+    	this.ticketsSold = ticketsSold;
+    	this.showings = showings;
+    	this.reviews = reviews;
     }
     
     protected void addShowing(String theater, String time) {

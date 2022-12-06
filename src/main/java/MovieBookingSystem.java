@@ -3,7 +3,6 @@ import User.UserHandler;
 
 public class MovieBookingSystem {
 
-//	private static AUser user = null;
 	private static UserHandler uh = UserHandler.getInstance();
 
     public static void main(String[] args) {
@@ -21,17 +20,11 @@ public class MovieBookingSystem {
 	
 
     public static void testUser() {
-    	uh.create("Hailey", "user@gmail.com", "123-456-7890", "123 Address St., Lubbock", "password1", false);
+    	uh.create("Hailey", "user", "123-456-7890", "123 Address St., Lubbock", "pw1", false);
     }
     
     public static void testAdmin() {
-    	uh.create("Admin", "admin", "555-123-4567", "456 Fakeplace Rd., Lubbock", "password2", true);
+    	uh.create("Admin", "admin", "555-123-4567", "456 Fakeplace Rd., Lubbock", "pw2", true);
     }
 
 }
-
-
-//public static void setUser(AUser user) {
-//MovieBookingSystem.user = user;
-//}
-//

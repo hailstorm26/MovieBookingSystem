@@ -1,4 +1,5 @@
-import User.UserHandler;
+import Movie.MovieHandler;
+import User.*;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -6,9 +7,10 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class GUI {
-	
+	private static MovieHandler mh = MovieHandler.getInstance();
 	JTextField username = new JTextField();
 	JTextField password = new JTextField();
 	
@@ -170,16 +172,14 @@ public class GUI {
 	private void browseCurrentMovies() {
 
 		//TO DO: change this to fetch information from movie class
+		ArrayList<String> titles = new ArrayList<>();
+		for(int i = 0; i < mh.movies.size(); i++){
+			titles.add(mh.movies.get(i).getTitle());
+		}
 
-		String movies[] = {
-				"movie 1",
-				"movie 2",
-				"movie 3",
-				"movie 4",
-				"movie 5",
-		};
 
-		JList movieList = new JList(movies);
+
+		JList movieList = new JList((ListModel) titles);
 		JFrame frame = new JFrame("Current Movies");
 		JPanel p = new JPanel();
 		JButton backButton = new JButton("Back");
@@ -209,12 +209,13 @@ public class GUI {
 		//TO DO: change this to fetch information from movie class
 
 		String movies[] = {
-				"movie 1",
+				"Smile",
 				"movie 2",
 				"movie 3",
 				"movie 4",
 				"movie 5",
 		};
+
 
 		JList movieList = new JList(movies);
 		JFrame frame = new JFrame("Upcoming Movies");

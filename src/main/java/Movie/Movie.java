@@ -13,7 +13,7 @@ public class Movie {
     private String description;
     private double price;
     private int ticketsSold;
-    private HashMap<String, List<String>> showings; // Theater location - List of Times
+    public static HashMap<String, List<String>> showings; // Theater location - List of Times
     public List<Review> reviews;
 
     protected Movie(String title, String description, double price, int ticketsSold, HashMap<String, List<String>> showings, List<Review> reviews) {
@@ -24,8 +24,11 @@ public class Movie {
     	this.showings = showings;
     	this.reviews = reviews;
     }
-    
-    protected void addShowing(String theater, String time) {
+
+    public String getTitle() {
+        return title;
+    }
+    public void addShowing(String theater, String time) {
         if (!showings.containsKey(theater)) {
             List<String> times = new ArrayList<>();
             times.add(time);
@@ -39,7 +42,7 @@ public class Movie {
         reviews.add(review);
     }
 
-	public HashMap<String, List<String>> getShowings() {
+	public static HashMap<String, List<String>> getShowings() {
 		return showings;
 	}
 

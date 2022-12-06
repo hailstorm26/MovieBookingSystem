@@ -2,15 +2,12 @@ package Movie;
 
 import User.UserHandler;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class MovieHandler {
     // List of movies
     // Times and theaters are stored on object
-    private HashSet<Movie> movies = new HashSet<>();
+    public ArrayList<Movie> movies = new ArrayList<Movie>();
     private static MovieHandler instance;
 
     public static MovieHandler getInstance() {
@@ -45,7 +42,7 @@ public class MovieHandler {
         return search(title).getShowings().keySet();
     }
 
-    private Movie findIfPresent(String source, HashSet<Movie> set)
+    private Movie findIfPresent(String source, ArrayList<Movie> set)
     {
         if (set.contains(source)) {
             for (Movie obj : set) {

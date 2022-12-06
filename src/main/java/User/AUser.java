@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.ArrayList;
 
 @Data
-public abstract class User {
+public abstract class AUser {
 	
     private String name;
     private String email;
@@ -14,8 +14,8 @@ public abstract class User {
     private String homeAddress;
     private String password;
     private ArrayList<Ticket> tickets;
-    
-	protected User(String name, String email, String phoneNumber, String homeAddress, String password) {
+        
+	protected AUser(String name, String email, String phoneNumber, String homeAddress, String password) {
 		name = this.name;
 		email = this.email;
 		phoneNumber = this.phoneNumber;
@@ -28,11 +28,32 @@ public abstract class User {
 	}
 	
 	protected String getPassword() {
+		System.out.println("getting password");
 		return password;
 	}
 
 	public ArrayList<Ticket> getTickets() {
 		return tickets;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public void setHomeAddress(String homeAddress) {
+		this.homeAddress = homeAddress;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 

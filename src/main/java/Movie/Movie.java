@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import Ticket.Ticket;
-import User.User;
+import User.AUser;
 
 @Data @Builder
 public class Movie {

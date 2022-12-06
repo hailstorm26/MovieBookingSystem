@@ -4,8 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UserHandler {
-    public Map<String, User> users = new HashMap<>(); // email - user
-    private User AUser;
+
+	public Map<String, AUser> users = new HashMap<>(); // email - user
+    private AUser AUser;
     public static UserHandler instance;
 
     public static UserHandler getInstance() {
@@ -24,17 +25,17 @@ public class UserHandler {
         if (users.containsKey(email)) {
             return false;
         }
-        //User AUser = new AdminUser(name, email, phoneNumber, homeAddress, password);
         if (admin) {
-            AdminUser adminUser = new AdminUser(name, email, phoneNumber, homeAddress, password);
+        	AdminUser adminUser = new AdminUser(name, email, phoneNumber, homeAddress, password);
             users.putIfAbsent(email, adminUser);
         } else {
-            BasicUser basicUser = new BasicUser(name, email, phoneNumber, homeAddress, password);
-            users.putIfAbsent(email, basicUser);
+        	BasicUser user = new BasicUser(name, email, phoneNumber, homeAddress, password);
+            users.putIfAbsent(email, user);
         }
+
         return true;
     }
-
+    
     public boolean login(String email, String password) {
         if (!users.containsKey(email)) {
             return false;
@@ -54,8 +55,9 @@ public class UserHandler {
         return false;
     }
 
-    public User getUser() {
+    public AUser getUser() {
         return this.AUser;
     }
 
 }
+

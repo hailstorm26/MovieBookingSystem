@@ -15,14 +15,16 @@ public class Movie {
     private int ticketsSold;
     public HashMap<String, List<String>> showings; // Theater location - List of Times
     public List<Review> reviews;
+    public String image;
 
-    protected Movie(String title, String description, double price, int ticketsSold, HashMap<String, List<String>> showings, List<Review> reviews) {
+    protected Movie(String title, String description, double price, int ticketsSold, HashMap<String, List<String>> showings, List<Review> reviews, String image) {
     	this.title = title;
     	this.description = description;
     	this.price = price;
     	this.ticketsSold = ticketsSold;
     	this.showings = showings;
     	this.reviews = reviews;
+        this.image = image;
     }
 
     public String getTitle() {

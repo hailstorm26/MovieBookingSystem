@@ -13,7 +13,7 @@ public class Movie {
     private String description;
     private double price;
     private int ticketsSold;
-    public static HashMap<String, List<String>> showings; // Theater location - List of Times
+    public HashMap<String, List<String>> showings; // Theater location - List of Times
     public List<Review> reviews;
 
     protected Movie(String title, String description, double price, int ticketsSold, HashMap<String, List<String>> showings, List<Review> reviews) {
@@ -42,7 +42,7 @@ public class Movie {
         reviews.add(review);
     }
 
-	public static HashMap<String, List<String>> getShowings() {
+	public HashMap<String, List<String>> getShowings() {
 		return showings;
 	}
 

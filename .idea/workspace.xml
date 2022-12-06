@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movie/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +72,14 @@
       <updated>1669993530826</updated>
       <workItem from="1669993535403" duration="17220000" />
     </task>
+    <task id="LOCAL-00001" summary="GUI stuff">
+      <created>1670354514806</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670354514806</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,35 +101,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MovieBookingSystem.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MovieBookingSystem.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/Movie/Movie.java</url>
-          <line>18</line>
-          <properties class="Movie.Movie" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

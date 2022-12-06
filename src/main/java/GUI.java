@@ -1,5 +1,5 @@
 import Movie.MovieHandler;
-import User.*;
+import User.UserHandler;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -166,7 +166,10 @@ public class GUI {
 	}
 	
 	private void searchMovies() {
-		// TODO Auto-generated method stub
+		JTextField searchBar = new JTextField();
+		JButton searchButton = new JButton();
+
+
 	}
 	
 	private void browseCurrentMovies() {
@@ -177,9 +180,10 @@ public class GUI {
 			titles.add(mh.movies.get(i).getTitle());
 		}
 
+		String[] titlesArr = new String[titles.size()];
+		titlesArr = titles.toArray(titlesArr);
 
-
-		JList movieList = new JList((ListModel) titles);
+		JList movieList = new JList(titlesArr);
 		JFrame frame = new JFrame("Current Movies");
 		JPanel p = new JPanel();
 		JButton backButton = new JButton("Back");
@@ -314,10 +318,13 @@ public class GUI {
 	private void bookTicket() {
 		//joptionpane for time, theater, payment method
 		//after payment method selected, go to new screen for card info
+
+
 	}
 
 	private void writeReview(){
-		//sele
+		JButton backButton = new JButton();
+
 	}
 
 	private void loggedInAdmin() {

@@ -1,12 +1,12 @@
 package User;
 
-public class AdminUser {
-//    public AdminUser(String name, String email, String phoneNumber, String homeAddress, String password) {
-//        name = name;
-//        email = email;
-//        phoneNumber = phoneNumber;
-//        homeAddress = homeAddress;
-//        password = password;
-//    }
+public class AdminUser extends User {
 
+    public AdminUser(String name, String email, String phoneNumber, String homeAddress, String password) {
+        super(name, email, phoneNumber, homeAddress, password);
+    }
+
+    public void isAdmin() {
+        System.out.println("yes");
+    }
 }

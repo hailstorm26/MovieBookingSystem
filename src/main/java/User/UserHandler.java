@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class UserHandler {
     public Map<String, User> users = new HashMap<>(); // email - user
-    private User user;
-    private static UserHandler instance;
+    private User AUser;
+    public static UserHandler instance;
 
     public static UserHandler getInstance() {
         if (instance == null) {
@@ -16,7 +16,7 @@ public class UserHandler {
                     instance = new UserHandler();
                 }
             }
-        }
+        } 
         return instance;
     }
 
@@ -24,12 +24,12 @@ public class UserHandler {
         if (users.containsKey(email)) {
             return false;
         }
-        User user = new AdminUser(name, email, phoneNumber, homeAddress, password);
+        User AUser = new AdminUser(name, email, phoneNumber, homeAddress, password);
         if (admin) {
-            AdminUser adminUser = (AdminUser) user;
+            AdminUser adminUser = (AdminUser) AUser;
             users.putIfAbsent(email, adminUser);
         } else {
-            BasicUser basicUser = (BasicUser) user;
+            BasicUser basicUser = (BasicUser) AUser;
             users.putIfAbsent(email, basicUser);
         }
         return true;
@@ -42,20 +42,20 @@ public class UserHandler {
         if (!users.get(email).getPassword().equals(password)) {
             return false;
         }
-        this.user = users.get(email);
+        this.AUser = users.get(email);
         return true;
     }
 
     public boolean logout() {
-        if (this.user != null) {
-            this.user = null;
+        if (this.AUser != null) {
+            this.AUser = null;
             return true;
         }
         return false;
     }
 
     public User getUser() {
-        return this.user;
+        return this.AUser;
     }
 
 }

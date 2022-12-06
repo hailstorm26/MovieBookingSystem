@@ -1,6 +1,6 @@
-import javax.swing.*;
-
 import User.UserHandler;
+
+import javax.swing.*;
 
 public class GUI {
 	
@@ -109,6 +109,8 @@ public class GUI {
 		String phone = phoneNumber.getText();
 		String addy = address.getText();
 		String pw = password.getText();
+		System.out.println("successfully created an Account as user");
+		loggedInUser();
 		
 		//create user account using UserHandler method
 		//...

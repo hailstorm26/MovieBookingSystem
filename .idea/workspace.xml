@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="">
+    <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movie/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ticket/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ticket/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ticket/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ticket/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ticket/TicketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ticket/TicketHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User/AUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/AUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/AdminUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User/BasicUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/BasicUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,22 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.import"
-  }
-}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MovieBookingSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MovieBookingSystem" />
+      <module name="MovieBookingSystem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MovieBookingSystem" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

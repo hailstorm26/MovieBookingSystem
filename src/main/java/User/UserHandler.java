@@ -24,12 +24,12 @@ public class UserHandler {
         if (users.containsKey(email)) {
             return false;
         }
-        User AUser = new AdminUser(name, email, phoneNumber, homeAddress, password);
+        //User AUser = new AdminUser(name, email, phoneNumber, homeAddress, password);
         if (admin) {
-            AdminUser adminUser = (AdminUser) AUser;
+            AdminUser adminUser = new AdminUser(name, email, phoneNumber, homeAddress, password);
             users.putIfAbsent(email, adminUser);
         } else {
-            BasicUser basicUser = (BasicUser) AUser;
+            BasicUser basicUser = new BasicUser(name, email, phoneNumber, homeAddress, password);
             users.putIfAbsent(email, basicUser);
         }
         return true;

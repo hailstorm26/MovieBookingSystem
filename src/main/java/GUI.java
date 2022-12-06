@@ -13,7 +13,9 @@ public class GUI {
 	JTextField address = new JTextField();
 	
 	public void start() {
+		System.out.println("\nstarting GUI\n");
 		if (MovieBookingSystem.getUser() == null ) {
+			System.out.println("inside condition");
             
 			String choice = loginOrSignup();
 
@@ -23,7 +25,7 @@ public class GUI {
             }
         } else {
             while(MovieBookingSystem.getUser() != null) {
-                //loggedIn();
+                loggedInUser();
             	//check if user or admin
             }
         }
@@ -31,6 +33,7 @@ public class GUI {
 
 	
 	private String loginOrSignup() {
+		System.out.println("log in or sign up");
 		String[] menu = {"Log in", "Sign up", ""};
 
         return (String) JOptionPane.showInputDialog(

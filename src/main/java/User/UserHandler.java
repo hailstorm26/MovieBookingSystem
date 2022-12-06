@@ -28,9 +28,11 @@ public class UserHandler {
         if (admin) {
         	AdminUser adminUser = new AdminUser(name, email, phoneNumber, homeAddress, password);
             users.putIfAbsent(email, adminUser);
+            System.out.println("username: " + email + "\npassword: " + adminUser.getPassword() + "\n");
         } else {
         	BasicUser user = new BasicUser(name, email, phoneNumber, homeAddress, password);
             users.putIfAbsent(email, user);
+            System.out.println("username: " + email + "\npassword: " + user.getPassword() + "\n");
         }
 
         return true;

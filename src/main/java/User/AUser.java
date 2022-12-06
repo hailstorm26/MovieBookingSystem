@@ -1,26 +1,26 @@
 package User;
 
 import Ticket.Ticket;
-import lombok.Data;
+//import lombok.Data;
 
 import java.util.ArrayList;
 
-@Data
+//@Data
 public abstract class AUser {
 	
-    private String name;
-    private String email;
-    private String phoneNumber;
-    private String homeAddress;
-    private String password;
-    private ArrayList<Ticket> tickets;
+	protected String name;
+	protected String email;
+	protected String phoneNumber;
+	protected String homeAddress;
+	protected String password;
+	protected ArrayList<Ticket> tickets;
         
 	protected AUser(String name, String email, String phoneNumber, String homeAddress, String password) {
-		name = this.name;
-		email = this.email;
-		phoneNumber = this.phoneNumber;
-		homeAddress = this.homeAddress;
-		password = this.password;
+		this.name = name;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.homeAddress = homeAddress;
+		this.password = password;
 	}
 	
 	public String getName() {
@@ -28,7 +28,6 @@ public abstract class AUser {
 	}
 	
 	protected String getPassword() {
-		System.out.println("getting password");
 		return password;
 	}
 

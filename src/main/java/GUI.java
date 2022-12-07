@@ -180,31 +180,6 @@ public class GUI {
 	}
 
 	private void searchMovies() {
-//		JFrame frame = new JFrame("Search Movies");
-//		JButton backButton = new JButton("Back");
-//		JTextField searchBar = new JTextField();
-//		JButton searchButton = new JButton("Enter");
-
-//		JPanel p = new JPanel();
-//		p.add(backButton);
-//		p.add(searchBar);
-//		p.add(searchButton);
-//		frame.add(p);
-//		frameSettings(frame);
-//		String search = searchBar.getText();
-//		System.out.println(search);
-//		backButton.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				frame.dispose();
-//				loggedInUser();
-//			}
-//		});
-//		searchButton.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent evt) {
-//				searchForMovie(search);
-//
-//			}
-//		});
 		JTextField searchBar = new JTextField();
 		Object[] userInput =  {
 				"Search: ", searchBar,
@@ -216,9 +191,7 @@ public class GUI {
 	}
 	private void searchForMovie(String searchEnter) {
 		Movie result = mh.search(searchEnter);
-		System.out.println(result.getTitle());
 		int index = mh.movies.indexOf(result);
-
 		displayMovie("search",index);
 	}
 	private void browseCurrentMovies() {
@@ -368,7 +341,7 @@ public class GUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				//writeReview(moviePick);
+				writeReview(moviePick);
 			}
 		});
 	}
@@ -455,9 +428,33 @@ public class GUI {
 		//call next thing
 	}
 
-	private void writeReview(){
-		JButton backButton = new JButton();
-
+	private void writeReview(int movie) {
+		JFrame frame = new JFrame("Write a Review");
+		JPanel p = new JPanel();
+		JButton backButton = new JButton("Back");
+		String[] reviewGrade = {"1", "2", "3","4","5"};
+		p.add(backButton);
+		frame.add(p);
+		frameSettings(frame);
+		String choice = (String) JOptionPane.showInputDialog(
+				null,
+				"Select an Option: ",
+				"Select an Option",
+				JOptionPane.QUESTION_MESSAGE,
+				null,
+				reviewGrade,
+				reviewGrade[4]);
+		JTextField header = new JTextField();
+		JTextField review = new JTextField();
+		Object[] userInput =  {
+				"Header: ", header,
+				"Review: ", review,
+		};
+		String rating = choice;
+		String title = mh.movies.get(movie).getTitle();
+		String headerText = header.getText();
+		String reviewText = review.getText();
+		mh.addReview(title,Double.parseDouble(rating), headerText,reviewText);
 	}
 
 	private void loggedInAdmin() {

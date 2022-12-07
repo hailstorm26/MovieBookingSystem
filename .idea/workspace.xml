@@ -7,8 +7,9 @@
     <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="movie update and log out option">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ticket/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ticket/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ticket/TicketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ticket/TicketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyListSelectionListener.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670380281996</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="search finally works">
+      <created>1670383485213</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670383485213</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +165,8 @@
     <MESSAGE value="movie images" />
     <MESSAGE value="display movie page woohoo" />
     <MESSAGE value="movie update and log out option" />
-    <option name="LAST_COMMIT_MESSAGE" value="movie update and log out option" />
+    <MESSAGE value="search finally works" />
+    <option name="LAST_COMMIT_MESSAGE" value="search finally works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -166,6 +175,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java</url>
           <line>45</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Movie/Movie.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/GUI.java</url>
+          <line>453</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/GUI.java</url>
+          <line>452</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

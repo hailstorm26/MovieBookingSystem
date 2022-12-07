@@ -105,6 +105,9 @@ public class MovieBookingSystem {
         mh.addMovie(mov);
 
     }
+    public void createReviews(String title, double rating, String header, String review) {
+        mh.addReview(title,rating,header,review);
+    }
 
 
 }

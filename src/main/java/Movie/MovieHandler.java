@@ -51,7 +51,6 @@ public class MovieHandler {
         return null;
     }
 
-
     public void addReview(String movieTitle, double rating, String header, String review) {
         Review r = new Review(rating, header, UserHandler.getInstance().getUser().getName(), review);
         search(movieTitle).addReview(r);

@@ -273,7 +273,6 @@ public class GUI {
 	private void displayMovie(String fromPage, int moviePick) {
 
 		//TO DO: change this to fetch information from movie class
-
 		String[] reviewsObject = {
 				"review 1",
 				"review 2",
@@ -295,7 +294,7 @@ public class GUI {
 		JButton bookButton = new JButton("Book Ticket");
 		JLabel reviews = new JLabel("Reviews:");
 		JButton reviewButton = new JButton("Write Review");
-		JList reviewList = new JList(reviewsObject);
+		//JList reviewList = new JList(reviewsObject);
 
 		JPanel p = new JPanel();
 
@@ -308,7 +307,7 @@ public class GUI {
 		p.add(runtime);
 		p.add(bookButton);
 		p.add(reviews);
-		p.add(reviewList);
+		//p.add(reviewList);
 		p.add(reviewButton);
 
 		frame.add(p);

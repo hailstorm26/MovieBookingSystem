@@ -77,6 +77,15 @@ public class MovieBookingSystem {
                 " leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight" +
                 " a difficult war against the humans.",7.50, "src/main/java/avatar2.png",
                 "Zoe Saldana, Sam Worthington, Kate Winslet","3h 12m");
+//        createReviews("Avatar", 5,"Fantastic movie!","This incredible movie is a work of genius on every level. Flawless script, Pandora's hauntingly beautiful scenery, seamless technology and of course engaging characters and acting. You are watching A -1 entertainment, but much more than that as you realize that this interwoven tale on another pristine planet, which earthlings are trying to dominate, parallels what we have done to a once pristine North America, the aboriginal  population, Africa and much of her peoples and the Amazon rain forest etc." );
+//        createReviews("Avatar",2,"best movie ever", "What a daring dream it is, to combine the finest qualities of humanity with these marvelous creatures. I always turn to this film when I'm feeling out of sorts, and am always happy to gaze upon the visage of dear, sweet Neytiri. Oh, if only I were the one who could have overcome his paralysis on an alien adventure planet to become her boyfriend, instead of that other guy. Then she could have shown me how to be bold and courageous, and stand up to fight for your people, and maybe later, engage in a bizarre extraterrestrial reproductive process involving ponytails, and a magical tree I guess? But seriously, this is brilliant. I say, perhaps there is no other movie that comes near the realm of limitless wonder that this one does. Land sakes alive this is a great movie.");
+//        createReviews("Black Adam", 5, "A masterpiece ", "This movie is by no accounts a masterpiece, but it is an incredibly fun and surprisingly funny film that has a shockingly nuanced theme about heroism and morality being relative to one's own power to enforce it. I watched this movie alone and actually laughed out loud in the theaters a few times. The pacing is fun, the special effects are immersive, and all the characters are lovable. The corniness of some moments is pretty tongue-in-cheek and self-aware so it doesn't become cringey. If you want a fun movie to watch alone or with friends, Black Adam is it.");
+//        createReviews("Black Adam", 4,"","");
+//        createReviews("", ,"Not bad!","");
+//        createReviews();
+//        createReviews();
+
+
 
         GUI gui = new GUI();
     	gui.start();
@@ -105,7 +114,7 @@ public class MovieBookingSystem {
         mh.addMovie(mov);
 
     }
-    public void createReviews(String title, double rating, String header, String review) {
+    public static void createReviews(String title, double rating, String header, String review) {
         mh.addReview(title,rating,header,review);
     }
 

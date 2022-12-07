@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="movie images">
-      <change afterPath="$PROJECT_DIR$/src/main/java/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/inception.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interstellar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/john wick.png" afterDir="false" />
+    <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="display movie page woohoo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670368619725</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="display movie page woohoo">
+      <created>1670375616492</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670375616492</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="movies" />
     <MESSAGE value="movie images" />
-    <option name="LAST_COMMIT_MESSAGE" value="movie images" />
+    <MESSAGE value="display movie page woohoo" />
+    <option name="LAST_COMMIT_MESSAGE" value="display movie page woohoo" />
   </component>
 </project>

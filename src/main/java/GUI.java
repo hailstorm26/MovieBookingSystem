@@ -8,6 +8,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 
 public class GUI {
@@ -310,7 +312,7 @@ public class GUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				bookTicket();
+				bookTicket(moviePick);
 			}
 		});
 
@@ -318,15 +320,91 @@ public class GUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				writeReview();
+				//writeReview(moviePick);
 			}
 		});
 	}
 
-	private void bookTicket() {
-		//joptionpane for time, theater, payment method
-		//after payment method selected, go to new screen for card info
+	private void bookTicket(int moviePick) {
+		HashMap<String, List<String>> menu = mh.movies.get(moviePick).getShowings();
 
+		ArrayList<String> theaterChoice = new ArrayList<String>();
+		ArrayList<String> timeChoice = new ArrayList<String>();
+		for(String key : menu.keySet()) {
+			theaterChoice.add(key);
+			for(String element: menu.get(key)) {
+				timeChoice.add(element);
+			}
+		}
+
+		//convert to arrays
+		String[] theaterArr = new String[theaterChoice.size()];
+		theaterArr = theaterChoice.toArray(theaterArr);
+		String[] timeArr = new String[timeChoice.size()];
+		timeArr = timeChoice.toArray(timeArr);
+
+		//payment method arr
+		String[] paymentArr = {"Credit", "Debit", "Paypal"};
+
+		//choices
+		String choice = (String) JOptionPane.showInputDialog(
+				null,
+				"Choose theater: ",
+				"Book Ticket",
+				JOptionPane.QUESTION_MESSAGE,
+				null,
+				theaterArr,
+				theaterArr[0]);
+
+		String choice2 = (String) JOptionPane.showInputDialog(
+				null,
+				"Choose time: ",
+				"Book Ticket",
+				JOptionPane.QUESTION_MESSAGE,
+				null,
+				timeArr,
+				timeArr[0]);
+
+		String choice3 = (String) JOptionPane.showInputDialog(
+				null,
+				"Choose payment method: ",
+				"Book Ticket",
+				JOptionPane.QUESTION_MESSAGE,
+				null,
+				paymentArr,
+				paymentArr[0]);
+
+		purchaseTicket();
+	}
+
+	private void purchaseTicket() {
+		JTextField cardNum = new JTextField();
+		JTextField name = new JTextField();
+		JTextField csvCode = new JTextField();
+		JTextField expDate = new JTextField();
+		JTextField billingAddress = new JTextField();
+
+
+		Object[] userInput =  {
+				"Card number: ", cardNum,
+				"Name on card: ", name,
+				"CSV: ", csvCode,
+				"Expiration date: ", expDate,
+				"Billing address: ", billingAddress,
+		};
+
+		JOptionPane.showConfirmDialog(null, userInput, "Purchase Ticket", JOptionPane.OK_CANCEL_OPTION);
+		String card = cardNum.getText();
+		String nm = name.getText();
+		String csv = csvCode.getText();
+		String exp = expDate.getText();
+		String addr = billingAddress.getText();
+
+		//validate information
+
+
+
+		//call next thing
 	}
 
 	private void writeReview(){

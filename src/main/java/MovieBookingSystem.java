@@ -15,10 +15,11 @@ public class MovieBookingSystem {
     public static void main(String[] args) {
     	testUser();
     	testAdmin();
-        createMovieAndShowings("7:45pm", "Lubbock", "Black Adam", "\nIn ancient Kahndaq, Teth Adam was bestowed the almighty powers of \n" +
-                "the gods. After using these powers for vengeance, he was imprisoned, becoming Black Adam. Nearly 5,000 \n" +
-                "years have passed, and Black Adam has gone from man to myth to legend. Now free, his unique form of justice,\n" +
-                " born out of rage, is challenged by modern-day heroes who form the Justice Society: Hawkman, Dr. Fate, \n" +
+        createMovieAndShowings("7:45pm", "Lubbock", "Black Adam", "In ancient Kahndaq, " +
+                "Teth Adam was bestowed the almighty powers of " +
+                "the gods. After using these powers for vengeance, he was imprisoned, becoming Black Adam. Nearly 5,000 " +
+                "years have passed, and Black Adam has gone from man to myth to legend. Now free, his unique form of justice," +
+                " born out of rage, is challenged by modern-day heroes who form the Justice Society: Hawkman, Dr. Fate, " +
                 "Atom Smasher and Cyclone.", 7.50, "src/main/java/black adam.png", "Dwayne Johnson," +
                 " Aldis Hodge, Pierce Brosnan", "2h 5m");
         createMovieAndShowings("8:00pm", "Lubbock", "The Menu", "The film, penned by Will " +
@@ -33,7 +34,7 @@ public class MovieBookingSystem {
                 "belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that " +
                 "would ground him. Training a detachment of graduates for a special assignment, Maverick must confront " +
                 "the ghosts of his past and his deepest fears, culminating in a mission that demands the ultimate " +
-                "sacrifice from those who choose to fly it.", 7.50, "src/main/java/top gun maverick.png",
+                "sacrifice from those who choose to fly it.", 7.50, "src/main/java/top gun 2.png",
                 "Tom Cruise, jennifer Connelly, Miles Teller", "2h 10m");
     	createMovieAndShowings("8:45pm", "Lubbock", "Interstellar", "In Earth's " +
                 "future, a global crop blight and second Dust Bowl are slowly rendering the planet uninhabitable. " +
@@ -56,7 +57,7 @@ public class MovieBookingSystem {
                 "Unable to shake the feeling that he doesn't fit in, the adult Buddy travels to New York, in full elf " +
                 "uniform, in search of his real father. As it happens, this is Walter Hobbs (James Caan), a cynical " +
                 "businessman. After a DNA test proves this, Walter reluctantly attempts to start a relationship with " +
-                "the childlike Buddy with increasingly chaotic results",7.50, "src/main/java/elf.png",
+                "the childlike Buddy with increasingly chaotic results",7.50, "src/main/java/elf2.png",
                 "Will Ferrell, James Caan, Bob Newhart","1h 37m");
         createMovieAndShowings("3:15pm", "Lubbock", "Polar Express","Polar Express," +
                 " an inspiring adventure based on the beloved children's book by Chris Van Allsburg. " +
@@ -66,17 +67,16 @@ public class MovieBookingSystem {
         createMovieAndShowings("8:10pm", "Lubbock", "Guardians of the Galaxy vol 3","Still" +
                 " reeling from the loss of Gamora, Peter Quill rallies his team to defend the universe and one of their " +
                 "own - a mission that could mean the end of the Guardians if not successful.",7.50,
-                "src/main/java/guardians of the galaxy vol 3.png", "Chris Pratt, Zoe Saldana, Dave Bautista", null);
+                "src/main/java/guardians of the galaxy vol 3.png", "Chris Pratt, Zoe Saldana, Dave Bautista", "");
         createMovieAndShowings("9:40pm", "Lubbock", "John Wick: Chapter 4","With the" +
                 " price on his head ever increasing, legendary hit man John Wick takes his fight against the High Table" +
                 " global as he seeks out the most powerful players in the underworld, from New York to Paris to Japan" +
-                " to Berlin.",7.50, "src/main/java/john wick.png", "Keanu Reeves, Donnie Yen, Bill Skarsgard",null);
+                " to Berlin.",7.50, "src/main/java/john wick.png", "Keanu Reeves, Donnie Yen, Bill Skarsgard","");
         createMovieAndShowings("7:20pm", "Lubbock", "Avatar: The Way of Water","Jake" +
                 " Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must" +
                 " leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight" +
-                " a difficult war against the humans.",7.50, "src/main/java/avatar.png",
+                " a difficult war against the humans.",7.50, "src/main/java/avatar2.png",
                 "Zoe Saldana, Sam Worthington, Kate Winslet","3h 12m");
-
 
         GUI gui = new GUI();
     	gui.start();

@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="display movie page woohoo">
+    <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="movie update and log out option">
+      <change afterPath="$PROJECT_DIR$/src/main/java/avatar2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elf2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top gun 2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieBookingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top gun maverick.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670375616492</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="movie update and log out option">
+      <created>1670379391194</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670379391194</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +145,7 @@
     <MESSAGE value="movies" />
     <MESSAGE value="movie images" />
     <MESSAGE value="display movie page woohoo" />
-    <option name="LAST_COMMIT_MESSAGE" value="display movie page woohoo" />
+    <MESSAGE value="movie update and log out option" />
+    <option name="LAST_COMMIT_MESSAGE" value="movie update and log out option" />
   </component>
 </project>

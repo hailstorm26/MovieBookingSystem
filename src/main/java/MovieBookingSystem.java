@@ -15,10 +15,10 @@ public class MovieBookingSystem {
     public static void main(String[] args) {
     	testUser();
     	testAdmin();
-        createMovieAndShowings("7:45pm", "Lubbock", "Black Adam", "In ancient Kahndaq, Teth Adam was bestowed the almighty powers of " +
-                "the gods. After using these powers for vengeance, he was imprisoned, becoming Black Adam. Nearly 5,000 " +
-                "years have passed, and Black Adam has gone from man to myth to legend. Now free, his unique form of justice," +
-                " born out of rage, is challenged by modern-day heroes who form the Justice Society: Hawkman, Dr. Fate, " +
+        createMovieAndShowings("7:45pm", "Lubbock", "Black Adam", "\nIn ancient Kahndaq, Teth Adam was bestowed the almighty powers of \n" +
+                "the gods. After using these powers for vengeance, he was imprisoned, becoming Black Adam. Nearly 5,000 \n" +
+                "years have passed, and Black Adam has gone from man to myth to legend. Now free, his unique form of justice,\n" +
+                " born out of rage, is challenged by modern-day heroes who form the Justice Society: Hawkman, Dr. Fate, \n" +
                 "Atom Smasher and Cyclone.", 7.50, "src/main/java/black adam.png", "Dwayne Johnson," +
                 " Aldis Hodge, Pierce Brosnan", "2h 5m");
         createMovieAndShowings("8:00pm", "Lubbock", "The Menu", "The film, penned by Will " +

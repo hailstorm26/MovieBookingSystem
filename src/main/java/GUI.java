@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+
 public class GUI {
 	private static MovieHandler mh = MovieHandler.getInstance();
 	JTextField username = new JTextField();
@@ -174,7 +175,6 @@ public class GUI {
 	
 	private void browseCurrentMovies() {
 
-		//TO DO: change this to fetch information from movie class
 		ArrayList<String> titles = new ArrayList<>();
 		for(int i = 0; i < mh.movies.size()/2; i++){
 			titles.add(mh.movies.get(i).getTitle());
@@ -183,21 +183,15 @@ public class GUI {
 		String[] titlesArr = new String[titles.size()];
 		titlesArr = titles.toArray(titlesArr);
 
-		JList movieList = new JList(titlesArr);
+
 		JFrame frame = new JFrame("Current Movies");
-		JPanel p = new JPanel();
 		JButton backButton = new JButton("Back");
+		JList movieList = new JList(titlesArr);
+		JPanel p = new JPanel();
 		p.add(backButton);
 		p.add(movieList);
 		frame.add(p);
 		frameSettings(frame);
-
-		movieList.addListSelectionListener(new ListSelectionListener() {
-			@Override
-			public void valueChanged(ListSelectionEvent e) {
-				displayMovie("current");
-			}
-		});
 
 		backButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -205,6 +199,14 @@ public class GUI {
 				loggedInUser();
 			}
 		});
+
+		movieList.addListSelectionListener(new ListSelectionListener() {
+				@Override
+				public void valueChanged(ListSelectionEvent e) {
+					int selected = movieList.getSelectedIndex();
+					displayMovie("current", selected);
+				}
+			});
 
 	}
 
@@ -229,10 +231,12 @@ public class GUI {
 		frame.add(p);
 		frameSettings(frame);
 
+
 		movieList.addListSelectionListener(new ListSelectionListener() {
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
-				displayMovie("upcoming");
+				int selected = movieList.getSelectedIndex();
+				displayMovie("upcoming", selected);
 			}
 		});
 
@@ -245,7 +249,7 @@ public class GUI {
 
 	}
 
-	private void displayMovie(String fromPage) {
+	private void displayMovie(String fromPage, int moviePick) {
 
 		//TO DO: change this to fetch information from movie class
 
@@ -256,8 +260,13 @@ public class GUI {
 		};
 
 		JFrame frame = new JFrame("Movie Details");
-		ImageIcon i = new ImageIcon("src/main/java/icons8-blue-square-48.png");
-		JLabel titleAndSynopsis = new JLabel("Movie Title and synopsis", i, SwingConstants.HORIZONTAL);
+
+		ImageIcon i = new ImageIcon(mh.movies.get(moviePick).getImage());
+		Image image = i.getImage();
+		Image newimg = image.getScaledInstance(60, 70,  java.awt.Image.SCALE_SMOOTH);
+		ImageIcon newIcon = new ImageIcon(newimg);
+
+		JLabel titleAndSynopsis = new JLabel(mh.movies.get(moviePick).getTitle() + mh.movies.get(moviePick).getDescription(), newIcon, SwingConstants.HORIZONTAL);
 		JButton backButton = new JButton("Back");
 		JLabel cast = new JLabel("cast...");
 		JLabel runtime = new JLabel("runtime...");
@@ -267,9 +276,9 @@ public class GUI {
 		JList reviewList = new JList(reviewsObject);
 
 		JPanel p = new JPanel();
-		GridLayout layout = new GridLayout(8, 0);
 
-		p.setLayout(layout);
+		p.setLayout(new BoxLayout(p, BoxLayout.PAGE_AXIS));
+
 		p.add(backButton);
 		p.add(titleAndSynopsis);
 		p.add(cast);
@@ -317,7 +326,6 @@ public class GUI {
 	private void bookTicket() {
 		//joptionpane for time, theater, payment method
 		//after payment method selected, go to new screen for card info
-
 
 	}
 

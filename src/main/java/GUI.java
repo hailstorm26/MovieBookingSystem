@@ -1,3 +1,4 @@
+import Movie.Movie;
 import Movie.MovieHandler;
 import User.UserHandler;
 
@@ -179,12 +180,47 @@ public class GUI {
 	}
 
 	private void searchMovies() {
+//		JFrame frame = new JFrame("Search Movies");
+//		JButton backButton = new JButton("Back");
+//		JTextField searchBar = new JTextField();
+//		JButton searchButton = new JButton("Enter");
+
+//		JPanel p = new JPanel();
+//		p.add(backButton);
+//		p.add(searchBar);
+//		p.add(searchButton);
+//		frame.add(p);
+//		frameSettings(frame);
+//		String search = searchBar.getText();
+//		System.out.println(search);
+//		backButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				frame.dispose();
+//				loggedInUser();
+//			}
+//		});
+//		searchButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent evt) {
+//				searchForMovie(search);
+//
+//			}
+//		});
 		JTextField searchBar = new JTextField();
-		JButton searchButton = new JButton();
+		Object[] userInput =  {
+				"Search: ", searchBar,
+		};
 
-
+		JOptionPane.showConfirmDialog(null, userInput, "Searching", JOptionPane.OK_CANCEL_OPTION);
+		String search = searchBar.getText();
+		searchForMovie(search);
 	}
-	
+	private void searchForMovie(String searchEnter) {
+		Movie result = mh.search(searchEnter);
+		System.out.println(result.getTitle());
+		int index = mh.movies.indexOf(result);
+
+		displayMovie("search",index);
+	}
 	private void browseCurrentMovies() {
 
 		ArrayList<String> titles = new ArrayList<>();

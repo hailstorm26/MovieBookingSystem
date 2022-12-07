@@ -23,7 +23,7 @@ public class MovieHandler {
     }
 
     public Movie search(String title) {
-        return findIfPresent(title, movies);
+        return findIfPresent(title);
     }
 
     public void addMovie(Movie movie) {
@@ -42,16 +42,15 @@ public class MovieHandler {
         return search(title).getShowings().keySet();
     }
 
-    private Movie findIfPresent(String source, ArrayList<Movie> set)
-    {
-        if (set.contains(source)) {
-            for (Movie obj : set) {
-                if (obj.equals(source))
-                    return obj;
-            }
+    private Movie findIfPresent(String source) {
+        System.out.println(source);
+        for (Movie obj : movies) {
+            if (obj.getTitle().equals(source))
+                return obj;
         }
         return null;
     }
+
 
     public void addReview(String movieTitle, double rating, String header, String review) {
         Review r = new Review(rating, header, UserHandler.getInstance().getUser().getName(), review);

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="more ticket stuff">
+    <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="admin stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
     </list>
@@ -134,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670383485213</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="admin stuff">
+      <created>1670389317801</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670389317801</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +170,8 @@
     <MESSAGE value="display movie page woohoo" />
     <MESSAGE value="movie update and log out option" />
     <MESSAGE value="search finally works" />
-    <option name="LAST_COMMIT_MESSAGE" value="search finally works" />
+    <MESSAGE value="admin stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -16,8 +16,10 @@ public class Movie {
     public HashMap<String, List<String>> showings; // Theater location - List of Times
     public List<Review> reviews;
     public String image;
+    public String cast;
+    public String runtime;
 
-    protected Movie(String title, String description, double price, int ticketsSold, HashMap<String, List<String>> showings, List<Review> reviews, String image) {
+    protected Movie(String title, String description, double price, int ticketsSold, HashMap<String, List<String>> showings, List<Review> reviews, String image, String cast, String runtime) {
     	this.title = title;
     	this.description = description;
     	this.price = price;
@@ -25,11 +27,23 @@ public class Movie {
     	this.showings = showings;
     	this.reviews = reviews;
         this.image = image;
+        this.cast = cast;
+        this.runtime = runtime;
     }
 
     public String getTitle() {
         return title;
     }
+    public String getDescription() {
+        return description;
+    }
+    public String getCast() {
+        return cast;
+    }
+    public String getRuntime() {
+        return runtime;
+    }
+
     public void addShowing(String theater, String time) {
         if (!showings.containsKey(theater)) {
             List<String> times = new ArrayList<>();

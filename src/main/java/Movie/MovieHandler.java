@@ -30,8 +30,8 @@ public class MovieHandler {
         movies.add(movie);
     }
 
-    public Movie createMovie(String title, String description, double price, HashMap<String, List<String>> showings, String image) {
-        return new Movie(title, description, price, 0, showings, null, image);
+    public Movie createMovie(String title, String description, double price, HashMap<String, List<String>> showings, String image,String cast, String runtime) {
+        return new Movie(title, description, price, 0, showings, null, image, cast,runtime);
     }
 
     public void addShowing(String title, String theater, String time) {

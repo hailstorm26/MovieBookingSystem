@@ -176,7 +176,7 @@ public class GUI {
 
 		//TO DO: change this to fetch information from movie class
 		ArrayList<String> titles = new ArrayList<>();
-		for(int i = 0; i < mh.movies.size(); i++){
+		for(int i = 0; i < mh.movies.size()/2; i++){
 			titles.add(mh.movies.get(i).getTitle());
 		}
 
@@ -212,16 +212,15 @@ public class GUI {
 
 		//TO DO: change this to fetch information from movie class
 
-		String movies[] = {
-				"Smile",
-				"movie 2",
-				"movie 3",
-				"movie 4",
-				"movie 5",
-		};
+		ArrayList<String> titles = new ArrayList<>();
+		for(int i = mh.movies.size()/2; i < mh.movies.size(); i++){
+			titles.add(mh.movies.get(i).getTitle());
+		}
 
+		String[] titlesArr = new String[titles.size()];
+		titlesArr = titles.toArray(titlesArr);
 
-		JList movieList = new JList(movies);
+		JList movieList = new JList(titlesArr);
 		JFrame frame = new JFrame("Upcoming Movies");
 		JPanel p = new JPanel();
 		JButton backButton = new JButton("Back");

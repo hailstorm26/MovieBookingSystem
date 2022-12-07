@@ -1,5 +1,6 @@
 import Movie.Movie;
 import Movie.MovieHandler;
+import Ticket.TicketHandler;
 import User.UserHandler;
 
 import javax.swing.*;
@@ -11,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 
 public class GUI {
@@ -164,7 +166,7 @@ public class GUI {
 
 		switch (choice) {
 			case "Log out" -> logOut();
-			case "My Tickets" -> myTickets();
+			//case "My Tickets" -> myTickets();
 			case "Search movies" -> searchMovies();
 			case "Browse current movies" -> browseCurrentMovies();
 			case "Browse upcoming movies" -> browseUpcomingMovies();
@@ -176,7 +178,31 @@ public class GUI {
 		System.exit(0);
 	}
 
-	private void myTickets() {
+	private void myTickets(String movieTitle, String movieTime, String movieTheater) {
+		int ticketBarcode = (int)(Math.random() * 9999);
+		if(ticketBarcode <= 100000) {
+			ticketBarcode = ticketBarcode + 100000;
+		}
+
+		JFrame frame = new JFrame();
+
+		JLabel header = new JLabel("My Ticket: ");
+		JLabel title = new JLabel(movieTitle);
+		JLabel time = new JLabel(movieTime);
+		JLabel theater = new JLabel(movieTheater);
+		JLabel barcode = new JLabel(String.valueOf(ticketBarcode));
+
+		JPanel p = new JPanel();
+		p.setLayout(new BoxLayout(p, BoxLayout.PAGE_AXIS));
+		p.add(header);
+		p.add(title);
+		p.add(time);
+		p.add(theater);
+		p.add(barcode);
+
+		frame.add(p);
+		frameSettings(frame);
+
 	}
 
 	private void searchMovies() {
@@ -233,7 +259,6 @@ public class GUI {
 
 	private void browseUpcomingMovies() {
 
-		//TO DO: change this to fetch information from movie class
 		int count = mh.movies.size()/2;
 		ArrayList<String> titles = new ArrayList<>();
 		for(int i = mh.movies.size()/2; i < mh.movies.size(); i++){
@@ -366,6 +391,9 @@ public class GUI {
 		//payment method arr
 		String[] paymentArr = {"Credit", "Debit", "Paypal"};
 
+		//seats arr
+		String[] seatsArr = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+
 		//choices
 		String choice = (String) JOptionPane.showInputDialog(
 				null,
@@ -394,13 +422,28 @@ public class GUI {
 				paymentArr,
 				paymentArr[0]);
 
-		purchaseTicket();
+		String choice4 = (String) JOptionPane.showInputDialog(
+				null,
+				"Choose number of seats: ",
+				"Book Ticket",
+				JOptionPane.QUESTION_MESSAGE,
+				null,
+				seatsArr,
+				seatsArr[0]);
+
+
+		String title = mh.movies.get(moviePick).getTitle();
+		String time = choice;
+		String theater = choice2;
+		int seats = Integer.parseInt(choice4);
+		double price = mh.movies.get(moviePick).getPrice();
+		buyTicket(title, time, theater, seats, price);
 	}
 
-	private void purchaseTicket() {
+	private void buyTicket(String title, String time, String theater, int seats, double price) {
 		JTextField cardNum = new JTextField();
 		JTextField name = new JTextField();
-		JTextField csvCode = new JTextField();
+		JTextField cvvCode = new JTextField();
 		JTextField expDate = new JTextField();
 		JTextField billingAddress = new JTextField();
 
@@ -408,7 +451,7 @@ public class GUI {
 		Object[] userInput =  {
 				"Card number: ", cardNum,
 				"Name on card: ", name,
-				"CSV: ", csvCode,
+				"CVV: ", cvvCode,
 				"Expiration date: ", expDate,
 				"Billing address: ", billingAddress,
 		};
@@ -416,25 +459,22 @@ public class GUI {
 		JOptionPane.showConfirmDialog(null, userInput, "Purchase Ticket", JOptionPane.OK_CANCEL_OPTION);
 		String card = cardNum.getText();
 		String nm = name.getText();
-		String csv = csvCode.getText();
+		String cvv = cvvCode.getText();
 		String exp = expDate.getText();
 		String addr = billingAddress.getText();
 
 		//validate information
+		TicketHandler.getInstance().purchaseTicket(title, time, theater, card, cvv, seats, price);
+		System.out.println("successfully bought ticket:" + "\ntime: " + time + "\ntheater: " + theater + "\nseats: " + seats);
 
-
-
-		//call next thing
+		//display ticket
+		myTickets(title, time, theater);
 	}
 
 	private void writeReview(int movie) {
-		JFrame frame = new JFrame("Write a Review");
-		JPanel p = new JPanel();
 		JButton backButton = new JButton("Back");
 		String[] reviewGrade = {"1", "2", "3","4","5"};
-		p.add(backButton);
-		frame.add(p);
-		frameSettings(frame);
+
 		String choice = (String) JOptionPane.showInputDialog(
 				null,
 				"Select an Option: ",
@@ -443,16 +483,21 @@ public class GUI {
 				null,
 				reviewGrade,
 				reviewGrade[4]);
+		String rating = choice;
+
 		JTextField header = new JTextField();
 		JTextField review = new JTextField();
 		Object[] userInput =  {
 				"Header: ", header,
 				"Review: ", review,
 		};
-		String rating = choice;
+
+		JOptionPane.showConfirmDialog(null, userInput, "Write Review", JOptionPane.OK_CANCEL_OPTION);
+
 		String title = mh.movies.get(movie).getTitle();
 		String headerText = header.getText();
 		String reviewText = review.getText();
+
 		mh.addReview(title,Double.parseDouble(rating), headerText,reviewText);
 	}
 
@@ -478,12 +523,56 @@ public class GUI {
 
 
 	private void statusReport() {
-		// TODO Auto-generated method stub
+		//list of movies and tickets sold
+		ArrayList<String> titles = new ArrayList<>();
+		Random random = new Random();
+		for(int i = 0; i < mh.movies.size(); i++){
+			titles.add(mh.movies.get(i).getTitle() + "   - Tickets Sold: " + random.nextInt(1+10) + 1);
+		}
+		String[] titlesArr = new String[titles.size()];
+		titlesArr = titles.toArray(titlesArr);
+
+		JList movieList = new JList(titlesArr);
+		JFrame frame = new JFrame("Admin: Status Report");
+		JPanel p = new JPanel();
+		JButton backButton = new JButton("Back");
+		p.add(backButton);
+		p.add(movieList);
+		frame.add(p);
+		frameSettings(frame);
+
+		backButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				loggedInAdmin();
+			}
+		});
 	}
 
 
 	private void manageShows() {
-		// TODO Auto-generated method stub
+		ArrayList<String> titles = new ArrayList<>();
+		for(int i =0; i < mh.movies.size(); i++){
+			titles.add(mh.movies.get(i).getTitle());
+		}
+		String[] titlesArr = new String[titles.size()];
+		titlesArr = titles.toArray(titlesArr);
+
+		JList movieList = new JList(titlesArr);
+		JFrame frame = new JFrame("Admin: Manage Shows");
+		JPanel p = new JPanel();
+		JButton backButton = new JButton("Back");
+		p.add(backButton);
+		p.add(movieList);
+		frame.add(p);
+		frameSettings(frame);
+
+		backButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				loggedInAdmin();
+			}
+		});
 	}
 
 	private void frameSettings(JFrame f) {

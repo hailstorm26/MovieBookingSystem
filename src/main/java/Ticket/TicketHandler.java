@@ -45,6 +45,7 @@ public class TicketHandler {
                 !m.getShowings().keySet().contains(theater) || !m.getShowings().get(title).contains(time)) {
             return null;
         }
+
         Ticket ticket = new Ticket(time, theater, seat, price);
 
         UserHandler uh = UserHandler.getInstance();
@@ -56,4 +57,6 @@ public class TicketHandler {
         movie.setTicketsSold(movie.getTicketsSold() + 1);
         return ticket;
     }
+
+
 }

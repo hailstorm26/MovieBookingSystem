@@ -7,7 +7,8 @@
     <list default="true" id="625aef78-19c1-4d86-9d71-2a87a82c57b5" name="Changes" comment="movie update and log out option">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movie/MovieHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ticket/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ticket/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ticket/TicketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ticket/TicketHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

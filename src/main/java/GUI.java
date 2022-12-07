@@ -149,8 +149,8 @@ public class GUI {
 
 	private void loggedInUser() {
 		System.out.println("successfully logged in as user");
-		
-		String[] menu = {"Search movies", "Browse current movies", "Browse upcoming movies", ""};
+
+		String[] menu = {"Log out","My Tickets","Search movies", "Browse current movies", "Browse upcoming movies", ""};
 		
 		String choice = (String) JOptionPane.showInputDialog(
 				null,
@@ -159,15 +159,25 @@ public class GUI {
 				JOptionPane.QUESTION_MESSAGE,
 				null,
 				menu,
-				menu[3]);
-		
+				menu[5]);
+
 		switch (choice) {
+			case "Log out" -> logOut();
+			case "My Tickets" -> myTickets();
 			case "Search movies" -> searchMovies();
 			case "Browse current movies" -> browseCurrentMovies();
 			case "Browse upcoming movies" -> browseUpcomingMovies();
-		}		
+		}
 	}
-	
+
+	private void logOut() {
+		System.out.println("successfully logged out as user");
+		System.exit(0);
+	}
+
+	private void myTickets() {
+	}
+
 	private void searchMovies() {
 		JTextField searchBar = new JTextField();
 		JButton searchButton = new JButton();
@@ -215,7 +225,7 @@ public class GUI {
 	private void browseUpcomingMovies() {
 
 		//TO DO: change this to fetch information from movie class
-
+		int count = mh.movies.size()/2;
 		ArrayList<String> titles = new ArrayList<>();
 		for(int i = mh.movies.size()/2; i < mh.movies.size(); i++){
 			titles.add(mh.movies.get(i).getTitle());
@@ -237,7 +247,7 @@ public class GUI {
 		movieList.addListSelectionListener(new ListSelectionListener() {
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
-				int selected = movieList.getSelectedIndex();
+				int selected = movieList.getSelectedIndex() + count;
 				displayMovie("upcoming", selected);
 			}
 		});
@@ -265,13 +275,14 @@ public class GUI {
 
 		ImageIcon i = new ImageIcon(mh.movies.get(moviePick).getImage());
 		Image image = i.getImage();
-		Image newimg = image.getScaledInstance(60, 70,  java.awt.Image.SCALE_SMOOTH);
+		Image newimg = image.getScaledInstance(120, 150,  java.awt.Image.SCALE_SMOOTH);
 		ImageIcon newIcon = new ImageIcon(newimg);
 
-		JLabel titleAndSynopsis = new JLabel(mh.movies.get(moviePick).getTitle() + mh.movies.get(moviePick).getDescription(), newIcon, SwingConstants.HORIZONTAL);
+		JLabel titleAndPicture = new JLabel(mh.movies.get(moviePick).getTitle() , newIcon, SwingConstants.HORIZONTAL);
+		JLabel synopsis = new JLabel("<html><p>"+mh.movies.get(moviePick).getDescription()+"</p></html>");
 		JButton backButton = new JButton("Back");
-		JLabel cast = new JLabel("cast...");
-		JLabel runtime = new JLabel("runtime...");
+		JLabel cast = new JLabel("Star cast: "+ mh.movies.get(moviePick).getCast());
+		JLabel runtime = new JLabel("Runtime: "+ mh.movies.get(moviePick).getRuntime());
 		JButton bookButton = new JButton("Book Ticket");
 		JLabel reviews = new JLabel("Reviews:");
 		JButton reviewButton = new JButton("Write Review");
@@ -282,7 +293,8 @@ public class GUI {
 		p.setLayout(new BoxLayout(p, BoxLayout.PAGE_AXIS));
 
 		p.add(backButton);
-		p.add(titleAndSynopsis);
+		p.add(titleAndPicture);
+		p.add(synopsis);
 		p.add(cast);
 		p.add(runtime);
 		p.add(bookButton);
